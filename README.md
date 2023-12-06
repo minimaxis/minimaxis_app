@@ -92,7 +92,6 @@ minimaxis_app
 - Flutter BloC
 - Freezed
 - Freezed Annotations
-- Freezed Annotation
 - Provider
 - Build Runner
 - Google Fonts
