@@ -4,21 +4,21 @@ import 'package:minimaxis_app/core/extensions/build_context_utils.dart';
 import 'package:minimaxis_app/core/styles/colors.dart';
 import 'package:minimaxis_app/core/styles/text_style.dart';
 
-class InputCredit extends StatefulWidget {
+class InputWidget extends StatefulWidget {
   final String title;
   final TextEditingController controller;
-  const InputCredit({super.key, required this.title, required this.controller});
+  const InputWidget({super.key, required this.title, required this.controller});
 
   @override
-  State<InputCredit> createState() => _InputCreditState();
+  State<InputWidget> createState() => _InputWidgetState();
 }
 
-class _InputCreditState extends State<InputCredit> {
+class _InputWidgetState extends State<InputWidget> {
   @override
   Widget build(BuildContext context) {
     final styleModifier = context.appTextStyles;
     return Padding(
-      padding: const EdgeInsets.all(24.0),
+      padding: const EdgeInsets.all(8.0),
       child: Column(
         children: [
           LayoutBuilder(builder: (context, contraints) {

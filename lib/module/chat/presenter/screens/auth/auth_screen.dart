@@ -2,12 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:minimaxis_app/core/extensions/build_context_utils.dart';
 import 'package:minimaxis_app/core/styles/colors.dart';
 import 'package:minimaxis_app/core/styles/text_style.dart';
 import 'package:minimaxis_app/main.dart';
 import 'package:minimaxis_app/module/chat/infra/lightning_network/service/webln_service.dart';
+import 'package:minimaxis_app/module/chat/presenter/widgets/button_custom.dart';
+import 'package:minimaxis_app/module/chat/presenter/widgets/input_credit.dart';
 import 'package:provider/provider.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
@@ -176,10 +177,21 @@ class EmailComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final styleModifier = context.appTextStyles;
-    return Text(
-      'IN DEVELOPMENT',
-      style: GoogleFonts.inter(textStyle: styleModifier.defaultWhite),
+    final controller = TextEditingController();
+    return Column(
+      children: [
+        InputWidget(
+          title: "E-mail",
+          controller: controller,
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        ButtonCustom(
+          text: "Send code",
+          callback: () {},
+        )
+      ],
     );
   }
 }

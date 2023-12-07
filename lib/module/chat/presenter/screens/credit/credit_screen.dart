@@ -79,7 +79,7 @@ class _CreditScreenState extends State<CreditScreen> {
                 return BalanceCredit(amount: formattedAmount);
               },
             ),
-            InputCredit(
+            InputWidget(
               title: "Satoshi",
               controller: _creditController.satsController,
             ),
