@@ -25,6 +25,7 @@ dependencies:
   logger: ^2.0.2+1
   mermaid: ^0.9.35
   webview_flutter: ^2.0.13
+  url_launcher: ^6.2.2
 dev_dependencies:
   flutter_test:
     sdk: flutter

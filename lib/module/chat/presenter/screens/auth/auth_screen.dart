@@ -183,15 +183,19 @@ class EmailComponent extends StatelessWidget {
         InputWidget(
           title: "E-mail",
           controller: controller,
+          maxnumber: 99,
         ),
         const SizedBox(
           height: 10,
         ),
         ButtonCustom(
-          text: "Send code",
-          callback: () {},
+          text: "Login",
+          callback: () {
+            Modular.to.navigate("chat");
+          },
         )
       ],
     );
   }
 }
+

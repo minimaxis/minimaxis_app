@@ -81,6 +81,7 @@ class _CreditScreenState extends State<CreditScreen> {
             ),
             InputWidget(
               title: "Satoshi",
+              maxnumber: 6,
               controller: _creditController.satsController,
             ),
             const SizedBox(

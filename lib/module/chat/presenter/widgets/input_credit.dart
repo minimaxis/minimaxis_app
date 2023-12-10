@@ -6,8 +6,9 @@ import 'package:minimaxis_app/core/styles/text_style.dart';
 
 class InputWidget extends StatefulWidget {
   final String title;
+  final int maxnumber;
   final TextEditingController controller;
-  const InputWidget({super.key, required this.title, required this.controller});
+  const InputWidget({super.key, required this.title, required this.controller, required this.maxnumber});
 
   @override
   State<InputWidget> createState() => _InputWidgetState();
@@ -33,8 +34,8 @@ class _InputWidgetState extends State<InputWidget> {
             } else {
               return Text(
                 widget.title,
-                style: GoogleFonts.inter(
-                    textStyle: styleModifier.superSmallGray),
+                style:
+                    GoogleFonts.inter(textStyle: styleModifier.superSmallGray),
               );
             }
           }),
@@ -45,20 +46,18 @@ class _InputWidgetState extends State<InputWidget> {
               width: 351,
               height: 49,
               decoration: ShapeDecoration(
-                color: const Color(0xFF333333),
+                color: const Color.fromARGB(255, 31, 4, 4),
                 shape: RoundedRectangleBorder(
                   side: const BorderSide(width: 1, color: Color(0xFF8859FE)),
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
               child: TextFormField(
-                maxLength: 6,
+                maxLength: widget.maxnumber,
                 controller: widget.controller,
                 style: styleModifier.smallWhite,
                 decoration: InputDecoration(
-                  border: InputBorder.none,
-                  fillColor: AppColors.secondary
-                ),
+                    border: InputBorder.none, fillColor: AppColors.secondary),
               ))
         ],
       ),
