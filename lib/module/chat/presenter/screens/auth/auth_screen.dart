@@ -160,13 +160,6 @@ class LightningNetworkComponent extends StatelessWidget {
             backgroundColor: AppColors.secondary,
           ),
         ),
-        const SizedBox(
-          height: 20,
-        ),
-        Text(
-          "Supported Browsers: Microsoft Edge",
-          style: styleModifier.defaultWhite,
-        )
       ],
     );
   }
