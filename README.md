@@ -90,18 +90,15 @@ minimaxis_app
 - Flutter Dotenv
 - Flutter Spinkit
 - Flutter BloC
-- Freezed
-- Freezed Annotations
 - Provider
 - Build Runner
 - Google Fonts
 - HTTP
 - Logger
 - QR Flutter
-- Flutter Toast
-- Confetti
-- Just Audio
-- Mermaid
+- Animated Text Kit
+- URL Launcher
+- Build Runner
 
 ### Architecture
 - Clean Dart
