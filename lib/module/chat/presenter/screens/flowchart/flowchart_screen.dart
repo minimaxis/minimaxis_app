@@ -24,6 +24,7 @@ class _FlowchartScreenState extends State<FlowchartScreen> {
     Modular.to.navigate("chat");
   }
 
+  @override
   Widget build(BuildContext context) {
     final controller = ChatController();
     final styleModifier = context.appTextStyles;

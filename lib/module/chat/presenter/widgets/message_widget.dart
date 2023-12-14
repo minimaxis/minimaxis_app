@@ -1,10 +1,13 @@
+// ignore_for_file: deprecated_member_use
+
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:minimaxis_app/core/styles/colors.dart';
 
 class MessageWidget extends StatelessWidget {
   final String text;
 
-  const MessageWidget({super.key, required this.text});
+  const MessageWidget({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +21,11 @@ class MessageWidget extends StatelessWidget {
             color: AppColors.specialColor,
             borderRadius: BorderRadius.circular(8.0),
           ),
-          child: Text(
-            text,
-            style: const TextStyle(color: Colors.white),
+          child: TyperAnimatedTextKit(
+            text: [text],
+            speed: const Duration(milliseconds: 50), // Adjust the speed as needed
+            isRepeatingAnimation: false,
+            textStyle: const TextStyle(color: Colors.white),
           ),
         ),
       ),

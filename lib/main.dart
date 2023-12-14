@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:minimaxis_app/module/chat/infra/lightning_network/service/webln_service.dart';
 import 'package:provider/provider.dart';
@@ -7,7 +8,8 @@ import 'app_module.dart';
 String id = "2312...3201";
 String currentConversation = "None";
 
-void main() {
+void main() async {
+  await dotenv.load();
   runApp(ModularApp(module: AppModule(), child: const MyApp()));
 }
 

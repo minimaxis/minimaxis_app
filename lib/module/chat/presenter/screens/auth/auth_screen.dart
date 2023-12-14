@@ -5,7 +5,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:minimaxis_app/core/extensions/build_context_utils.dart';
 import 'package:minimaxis_app/core/styles/colors.dart';
 import 'package:minimaxis_app/core/styles/text_style.dart';
-import 'package:minimaxis_app/main.dart';
+// import 'package:minimaxis_app/main.dart';
 import 'package:minimaxis_app/module/chat/infra/lightning_network/service/webln_service.dart';
 import 'package:minimaxis_app/module/chat/presenter/widgets/button_custom.dart';
 import 'package:minimaxis_app/module/chat/presenter/widgets/input_credit.dart';
@@ -117,7 +117,7 @@ class GuestComponent extends StatelessWidget {
         ),
         InkWell(
           onTap: () {
-            id = "Guest";
+            // id = "Guest";
             Modular.to.navigate("chat");
           },
           child: QrImageView(
